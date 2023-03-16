@@ -100,11 +100,15 @@ color: rgb(0, 0, 0);
 }
 @media screen and (max-width: 550px) {
     .cap{
-        margin-top: 15px;
+        margin: 15px;
     }
     table {
         margin: 5px;
-        transform: rotate(90deg) scale(0.4);
+        transform: rotate(90deg) scale(0.45);
+        margin-top: -40px;
+    }
+    p{
+        margin: 5px 0;
     }
     
 }
