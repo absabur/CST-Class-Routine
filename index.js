@@ -30,14 +30,15 @@ const display = (image, sub, code, day, room, period, name, number, email) => {
     cap.style.display = "none";
     img.innerHTML = `<img src="images/${image}.jpg" alt="">`;
     para.innerHTML = `
-    <p><b>Subject Name:</b> ${sub}</p>
-    <p><b>Subject Code:</b> ${code}</p>
-    <p><b>Day:<b> ${day}</p>
-    <p><b>Room Number:</b> ${room}</p>
-    <p><b>Period:</b> ${period}</p>
-    <p><b>Teacher name:</b> ${name}</p>
-    <p><b>Techer Mobile:</b> ${number}</p>
-    <p><b>Teacer Email:</b> ${email}</p>
+    <b>Teacher name:</b> ${name}<br>
+    <b>Techer Mobile:</b> ${number}<br>
+    <b>Teacer Email:</b> ${email}<br>
+    <b>Subject Name:</b> ${sub}<br>
+    <b>Subject Code:</b> ${code}<br>
+    <b>Day:<b> ${day}<br>
+    <b>Room Number:</b> ${room}<br>
+    <b>Class Duration:</b> (${period})PM
+    
     `
 }
 
@@ -161,12 +162,13 @@ backR.addEventListener("click",() => {
 })
 
 const colorArr = ["white","#00203FFF","#606060FF","#101820FF","#195190FF","#603F83FF","#FAD0C9FF","#990011FF","#CBCE91FF","#FCF951FF","black","#ADEFD1FF","#D6ED17FF","#FEE715FF","#A2A2A1FF","#C7D3D4FF","#6E6E6DFF","#FCF6F5FF","#76528BFF","#422057FF"]
-const bgColorArr = ["Black","#ADEFD1FF","#D6ED17FF","#FEE715FF","#A2A2A1FF","#C7D3D4FF","#6E6E6DFF","#FCF6F5FF","#76528BFF","#422057FF","white","#00203FFF","#606060FF","#101820FF","#195190FF","#603F83FF","#FAD0C9FF","#990011FF","#CBCE91FF","#FCF951FF"]
+const bgColorArr = ["black","#ADEFD1FF","#D6ED17FF","#FEE715FF","#A2A2A1FF","#C7D3D4FF","#6E6E6DFF","#FCF6F5FF","#76528BFF","#422057FF","white","#00203FFF","#606060FF","#101820FF","#195190FF","#603F83FF","#FAD0C9FF","#990011FF","#CBCE91FF","#FCF951FF"]
 
 let x=0; 
 color.addEventListener("click",function(){
     
     main.style.color = `${colorArr[x]}`;
+    para.style.color = `${colorArr[x]}`;
     cap.style.backgroundColor = `${bgColorArr[x]}`;
     details.style.color = `${colorArr[x]}`;
     details.style.backgroundColor = `${bgColorArr[x]}`;
