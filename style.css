@@ -33,13 +33,10 @@
     height: 80px;
     border-radius: 50%;
 }
-/* td{
-    width: 12%;
-    padding: 0 10px;
-} */
+
 td,th{
     padding: 2px;
-    width: 12%;
+    min-width: 150px;
 }
 td p{
     height: 100px;
@@ -107,6 +104,7 @@ p:hover{
 .cross{
     padding: 10px;
 }
+
 .color-change{
     padding: 10px;
     margin-top: 20px;
@@ -120,11 +118,15 @@ p:hover{
 .color-change:hover{
     background-color: chartreuse;
 }
+.para{
+    line-height: 30px;
+}
 
-@media screen and (max-width: 1080px) {
+
+@media screen and (max-width: 1230px) {
     
     table {
-        transform:  scale(0.6);
+        transform:  scale(0.65);
     }
     
 }
@@ -141,6 +143,7 @@ p:hover{
     }
     .color-change{
         transform: scale(0.5);
+        margin-bottom: 35px;
     }
     .width-problem{
         min-width: 150px;
@@ -154,5 +157,10 @@ p:hover{
 @media screen and (max-width: 550px) {
     .cap{
         margin: 15px;
-    }  
+    } 
+    .color-change{
+        transform: scale(0.5);
+        margin-bottom: 35px;
+        margin-top: -15px;
+    }
 }
