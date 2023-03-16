@@ -153,15 +153,11 @@ for (let i = 0 ; i<M3.length ; i++){
 }
 
 backL.addEventListener("click",() => {
-    details.style.display = "none";
-    table.style.display = "block";
-    cap.style.display = "flex";
+    location.reload();
 })
 
 backR.addEventListener("click",() => {
-    details.style.display = "none";
-    table.style.display = "block";
-    cap.style.display = "flex";
+    location.reload();
 })
 
 const colorArr = ["white","#00203FFF","#606060FF","#101820FF","#195190FF","#603F83FF","#FAD0C9FF","#990011FF","#CBCE91FF","#FCF951FF","black","#ADEFD1FF","#D6ED17FF","#FEE715FF","#A2A2A1FF","#C7D3D4FF","#6E6E6DFF","#FCF6F5FF","#76528BFF","#422057FF"]
