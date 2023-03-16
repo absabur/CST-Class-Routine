@@ -142,6 +142,9 @@ p:hover{
     .color-change{
         transform: scale(0.5);
     }
+    .width-problem{
+        width: 150px;
+    }
 }
 @media screen and (max-width: 700px) {
     
