@@ -192,8 +192,8 @@ p:hover{
         margin-top: -15px;
     }
 }
-@media screen and (max-width: 450px) {
-    .main{
+@media screen and (max-width: 360px) {
+    .cap , table , .details{
         transform: scale(0.4);
     }
 }
