@@ -198,10 +198,12 @@ landscape.addEventListener("click",function(){
         landscape.innerHTML = "Potrait";
         table.style.marginTop = "-185px";
         table.classList.remove("default");
+        details.classList.remove("det-style");
     }
     else{
         landscape.innerHTML = "Landscape";
         table.style.marginTop = "-60px";
         table.classList.add("default");
+        details.classList.add("det-style");
     }
 })
