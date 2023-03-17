@@ -138,7 +138,7 @@ p:hover{
     
     table {
         transform:  scale(0.65);
-        transition: all 0.3s;
+        transition: all 1s;
     }
     
 }
@@ -148,7 +148,7 @@ p:hover{
     }
     table{
         scale: 0.4;
-        margin-top: -280;
+/*         margin-top: -280; */
     }
     
     .default {
@@ -156,22 +156,22 @@ p:hover{
         margin: 5px;
         transform: rotate(90deg);
         margin-top: -70px;
-        transition: all 0.3s;
+        transition: all 1s;
     }
     .details{
         scale: 0.60;
-        transition: all 0.3s;
+        transition: all 1s;
     }
     
     .det-style{
         scale: 0.60;
         transform: rotate(90deg);
-        transition: all 0.3s;
+        transition: all 1s;
     }
     .color-sec{
         transform: scale(0.5);
         margin-bottom: 35px;
-        transition: all 0.3s;
+        transition: all 1s;
     }
     .width-problem{
         min-width: 150px;
