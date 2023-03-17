@@ -166,6 +166,8 @@ let refreshColor = localStorage.getItem("Lcolor");
 let refreshBgColor = localStorage.getItem("Lbgcolor");
 main.style.color = refreshColor;
 para.style.color = refreshColor;
+backL.style.color = refreshColor;
+backR.style.color = refreshColor;
 details.style.color = refreshColor;
 cap.style.backgroundColor = refreshBgColor;
 details.style.color = refreshBgColor;
@@ -178,6 +180,8 @@ let x=0;
 color.addEventListener("click",function(){
     main.style.color = `${colorArr[x]}`;
     para.style.color = `${colorArr[x]}`;
+    backL.style.color = `${colorArr[x]}`;
+    backR.style.color = `${colorArr[x]}`;
     cap.style.backgroundColor = `${bgColorArr[x]}`;
     details.style.color = `${colorArr[x]}`;
     details.style.backgroundColor = `${bgColorArr[x]}`;
