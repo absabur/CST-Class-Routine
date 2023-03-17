@@ -8,6 +8,8 @@ const backL = details.querySelector(".back-l");
 const backR = details.querySelector(".back-r");
 const color = document.querySelector(".color-change");
 const p = document.querySelectorAll("p");
+const landscape = document.querySelector(".landscape");
+const colorSec = document.querySelector(".color-sec");
 
 const SS = table.querySelector(".SS");
 const DI = table.querySelectorAll(".DI");
@@ -21,23 +23,21 @@ let day;
 let room;
 let period;
 
-
 const display = (image, sub, code, day, room, period, name, number, email) => {
     day = day[0].toUpperCase() + day.slice(1).toLowerCase();
-    console.log(day)
     details.style.display = "flex";
     table.style.display = "none";
     cap.style.display = "none";
     img.innerHTML = `<img src="images/${image}.jpg" alt="">`;
     para.innerHTML = `
-    <b>Teacher name:</b> ${name}<br>
-    <b>Techer Mobile:</b> ${number}<br>
-    <b>Teacer Email:</b> ${email}<br>
-    <b>Subject Name:</b> ${sub}<br>
-    <b>Subject Code:</b> ${code}<br>
-    <b>Day:<b> ${day}<br>
-    <b>Room Number:</b> ${room}<br>
-    <b>Class Duration:</b> (${period})PM
+    Teacher name  : ${name}<br>
+    Techer Mobile : ${number}<br>
+    Teacer Email  : ${email}<br>
+    Subject Name  : ${sub}<br>
+    Subject Code  : ${code}<br>
+    Day           : ${day}<br>
+    Room Number   : ${room}<br>
+    Class Duration: (${period})PM
     
     `
 }
@@ -58,8 +58,6 @@ CGD2.addEventListener("click",() => {
 
 for (let i = 0 ; i<DI.length ; i++){
     DI[i].addEventListener("click",() => {
-        console.log(DI[i]);
-        console.log(i);
         if (i == 0){
             room = "311";
             day = "SUNDAY";
@@ -161,12 +159,23 @@ backR.addEventListener("click",() => {
     location.reload();
 })
 
-const colorArr = ["white","#00203FFF","#606060FF","#101820FF","#195190FF","#603F83FF","#FAD0C9FF","#990011FF","#CBCE91FF","#FCF951FF","black","#ADEFD1FF","#D6ED17FF","#FEE715FF","#A2A2A1FF","#C7D3D4FF","#6E6E6DFF","#FCF6F5FF","#76528BFF","#422057FF"]
-const bgColorArr = ["black","#ADEFD1FF","#D6ED17FF","#FEE715FF","#A2A2A1FF","#C7D3D4FF","#6E6E6DFF","#FCF6F5FF","#76528BFF","#422057FF","white","#00203FFF","#606060FF","#101820FF","#195190FF","#603F83FF","#FAD0C9FF","#990011FF","#CBCE91FF","#FCF951FF"]
+const colorArr = ["white","#00203FFF","#606060FF","#101820FF","#1235CA9F","#603F83FF","#FAD0C9FF","#990011FF","#190090FF","#600083FF","#FA00C9FF","#998811FF","#CBCE91FF","#FCF951FF","black","#ADEFD1FF","#D6ED17FF","#FEE715FF","#A2A2A1FF","#C7D3D4FF","#6E6E6DFF","#FCF6F5FF","#76528BFF","#422057FF"]
+const bgColorArr = ["black","#ADEFD1FF","#D6ED17FF","#FEE715FF","#A233A1FF","#C7D3D4FF","#6E6E6DFF","#FCF6F5FF","#76558BFF","#427757FF","white","#00203FFF","#76528BFF","#422057FF","white","#00203FFF","#606060FF","#101820FF","#195190FF","#603F83FF","#FAD0C9FF","#990011FF","#CBCE91FF","#FCF951FF"]
+
+let refreshColor = localStorage.getItem("Lcolor");
+let refreshBgColor = localStorage.getItem("Lbgcolor");
+main.style.color = refreshColor;
+para.style.color = refreshColor;
+details.style.color = refreshColor;
+cap.style.backgroundColor = refreshBgColor;
+details.style.color = refreshBgColor;
+details.style.backgroundColor = refreshBgColor;
+for (let i = 0 ; i<p.length ; i++){
+    p[i].style.backgroundColor = refreshBgColor;
+}
 
 let x=0; 
 color.addEventListener("click",function(){
-    
     main.style.color = `${colorArr[x]}`;
     para.style.color = `${colorArr[x]}`;
     cap.style.backgroundColor = `${bgColorArr[x]}`;
@@ -174,9 +183,25 @@ color.addEventListener("click",function(){
     details.style.backgroundColor = `${bgColorArr[x]}`;
     for (let i = 0 ; i<p.length ; i++){
         p[i].style.backgroundColor = `${bgColorArr[x]}`;
-    }details
+    }
+    localStorage.clear(); 
+    localStorage.setItem("Lcolor", colorArr[x]);
+    localStorage.setItem("Lbgcolor", bgColorArr[x]);
     x++;
     if(x>=colorArr.length){
         x = 0;
+    }
+})
+
+landscape.addEventListener("click",function(){
+    if (landscape.textContent == "Landscape"){
+        landscape.innerHTML = "Potrait";
+        table.style.marginTop = "-185px";
+        table.classList.remove("default");
+    }
+    else{
+        landscape.innerHTML = "Landscape";
+        table.style.marginTop = "-60px";
+        table.classList.add("default");
     }
 })
