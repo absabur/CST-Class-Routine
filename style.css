@@ -138,6 +138,7 @@ p:hover{
     
     table {
         transform:  scale(0.65);
+        transition: all 0.3s;
     }
     
 }
@@ -155,18 +156,22 @@ p:hover{
         margin: 5px;
         transform: rotate(90deg);
         margin-top: -70px;
+        transition: all 0.3s;
     }
     .details{
         scale: 0.60;
+        transition: all 0.3s;
     }
     
     .det-style{
         scale: 0.60;
         transform: rotate(90deg);
+        transition: all 0.3s;
     }
     .color-sec{
         transform: scale(0.5);
         margin-bottom: 35px;
+        transition: all 0.3s;
     }
     .width-problem{
         min-width: 150px;
