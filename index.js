@@ -30,15 +30,14 @@ const display = (image, sub, code, day, room, period, name, number, email) => {
     cap.style.display = "none";
     img.innerHTML = `<img src="images/${image}.jpg" alt="">`;
     para.innerHTML = `
-    Teacher name  : ${name}<br>
-    Techer Mobile : ${number}<br>
-    Teacer Email  : ${email}<br>
-    Subject Name  : ${sub}<br>
-    Subject Code  : ${code}<br>
-    Day           : ${day}<br>
-    Room Number   : ${room}<br>
-    Class Duration: (${period})PM
-    
+    <b>Teacher name  :</b> ${name}<br>
+    <b>Techer Mobile :</b> <a style="color:black; background-color:skyblue;border-radius:5px; padding:5px;" href="tel:${number}">${number}</a><br>
+    <b>Teacer Email  :</b> <a style="color:black; background-color:skyblue;border-radius:5px; padding:5px;" href="mailto:${email}">${email}</a><br>
+    <b>Subject Name  :</b> ${sub}<br>
+    <b>Subject Code  :</b> ${code}<br>
+    <b>Day           :</b> ${day}<br>
+    <b>Room Number   :</b> ${room}<br>
+    <b>Class Duration:</b> (${period})PM
     `
 }
 
