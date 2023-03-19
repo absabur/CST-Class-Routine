@@ -1,7 +1,7 @@
 const table = document.querySelector("table");
 const main = document.querySelector(".main");
 const cap = document.querySelector(".cap");
-const details = document.querySelector(".details");
+const details = document.querySelector("#details");
 const img = details.querySelector(".img");
 const para = details.querySelector(".para");
 const backL = details.querySelector(".back-l");
@@ -27,12 +27,13 @@ const display = (image, sub, code, day, room, period, name, number, email) => {
     day = day[0].toUpperCase() + day.slice(1).toLowerCase();
     details.style.display = "flex";
     table.style.display = "none";
+    landscape.style.display = "none";
     cap.style.display = "none";
     img.innerHTML = `<img src="images/${image}.jpg" alt="">`;
     para.innerHTML = `
     <b>Teacher name  :</b> ${name}<br>
-    <b>Techer Mobile :</b> <a style="color:black; background-color:skyblue;border-radius:5px; padding:5px;" href="tel:${number}">${number}</a><br>
-    <b>Teacer Email  :</b> <a style="color:black; background-color:skyblue;border-radius:5px; padding:5px;" href="mailto:${email}">${email}</a><br>
+    <b>Techer Mobile :</b> <a style="color:black; background-color:skyblue;border-radius:5px; padding:3px;" href="tel:${number}">${number}</a><br>
+    <b>Teacer Email  :</b> <a style="color:black; background-color:skyblue;border-radius:5px; padding:3px;" href="mailto:${email}">${email}</a><br>
     <b>Subject Name  :</b> ${sub}<br>
     <b>Subject Code  :</b> ${code}<br>
     <b>Day           :</b> ${day}<br>
@@ -197,16 +198,12 @@ color.addEventListener("click",function(){
 })
 
 landscape.addEventListener("click",function(){
-    if (landscape.textContent == "Landscape"){
-        landscape.innerHTML = "Potrait";
-//         table.style.marginTop = "-185px";
-        table.classList.remove("default");
-        details.classList.remove("det-style");
+    if (landscape.textContent == "Potrait"){
+        landscape.innerHTML = "Landscape";
+        table.classList.add("default");
     }
     else{
-        landscape.innerHTML = "Landscape";
-//         table.style.marginTop = "-60px";
-        table.classList.add("default");
-        details.classList.add("det-style");
+        landscape.innerHTML = "Potrait";
+        table.classList.remove("default");
     }
 })
