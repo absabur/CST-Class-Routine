@@ -32,13 +32,14 @@ const display = (image, sub, code, day, room, period, name, number, email) => {
     img.innerHTML = `<img src="images/${image}.jpg" alt="">`;
     para.innerHTML = `
     <b>Teacher name  :</b> ${name}<br>
-    <b>Techer Mobile :</b> <a style="color:black; background-color:skyblue;border-radius:5px; padding:3px;" href="tel:${number}">${number}</a><br>
-    <b>Teacer Email  :</b> <a style="color:black; background-color:skyblue;border-radius:5px; padding:3px;" href="mailto:${email}">${email}</a><br>
+    <b>Teacher Mobile :</b> <a style="color:black; background-color:skyblue;border-radius:5px; padding:3px;" href="tel:${number}">${number}</a><br>
+    <b>Teacher Email  :</b> <a style="color:black; background-color:skyblue;border-radius:5px; padding:3px;" href="mailto:${email}">${email}</a><br>
     <b>Subject Name  :</b> ${sub}<br>
     <b>Subject Code  :</b> ${code}<br>
     <b>Day           :</b> ${day}<br>
     <b>Room Number   :</b> ${room}<br>
-    <b>Class Duration:</b> (${period})PM
+    <b>Class Duration:</b> (${period})PM<br>
+    <b>[বি: দ্র: জরুরি প্রয়োজন ছাড়া ফোন দেওয়া নিষেধ।]<b>
     `
 }
 
