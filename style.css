@@ -29,6 +29,7 @@ html{
     border: 2px dashed red;
     transition: all 0.7s;
     font-size: 1.3rem;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
 }
 .cap img{
     height: 100px;
@@ -49,7 +50,7 @@ html{
     background-color: aqua;
     transition: all 0.4s;
     font-weight: bolder;
-
+    box-shadow: 0 0 20px black;
 }
 .landscape{
     display: none;
@@ -68,6 +69,7 @@ th{
     min-width: 160px;
     width: 100%;
 }
+
 th , td{
     padding: 3px;
 }
@@ -87,6 +89,7 @@ tr p{
     font-weight: bolder;
     font-size: 1.05rem;
     cursor: pointer;
+    box-shadow: 0 0 20px black;
 }
 
 tr p:hover{
@@ -104,6 +107,7 @@ tr p:hover{
     height: 500px;
     border-radius: 10px;
     border: 4px dashed rgb(27, 116, 53);
+    box-shadow: 0 0 20px rgb(0, 0, 0);
     line-height: 27px;
     display: none;
     transition: all 1s;
@@ -130,6 +134,23 @@ tr p:hover{
     margin: 10px;
     height: 50%;
 }
+
+.footer{
+    margin-top: 80px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+}
+.footer span a{
+    color: red;
+    padding: 5px;
+}
+
 
 @media screen and (max-width: 1270px) {
     
@@ -182,6 +203,13 @@ tr p:hover{
     }
     .landscape{
         display: block;
+    }
+    .footer{
+        height: 80px;
+        font-size: 1rem;
+    }
+    .footer span a{
+        padding: 3px;
     }
 }
 @media screen and (max-width: 450px) {
