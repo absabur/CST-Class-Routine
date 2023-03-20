@@ -39,7 +39,7 @@ const display = (image, sub, code, day, room, period, name, number, email) => {
     <b>Day           :</b> ${day}<br>
     <b>Room Number   :</b> ${room}<br>
     <b>Class Duration:</b> (${period})PM<br>
-    <b>[বি: দ্র: জরুরি প্রয়োজন ছাড়া ফোন দেওয়া নিষেধ।]<b>
+    <b style="background-color:red; padding:5px; border-radius:5px; font-size:15px;";>[বি: দ্র: জরুরি প্রয়োজন ছাড়া ফোন দেওয়া নিষেধ।]<b>
     `
 }
 
