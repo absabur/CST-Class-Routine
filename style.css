@@ -15,7 +15,7 @@ html{
     justify-content: center;
     flex-direction: column;
     font-family: 'Josefin Sans', sans-serif;
-    transition: all 0.7s;
+    transition: all 0.5s;
     background-color: antiquewhite;
 }
 .cap{
@@ -27,7 +27,7 @@ html{
     padding: 10px;
     border-radius: 10px;
     border: 2px dashed red;
-    transition: all 0.7s;
+    transition: all 0.5s;
     font-size: 1.3rem;
     box-shadow: 0 0 20px rgb(0, 0, 0);
 }
@@ -62,7 +62,7 @@ html{
 
 table{
     margin-top: 20px;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 th{
